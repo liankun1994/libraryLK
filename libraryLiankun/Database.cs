@@ -61,7 +61,8 @@ namespace libraryLiankun
         /// <param name="password">数据库密码</param>
         public Database(databaseType dbt, string databaseName, string password = "")
         {
-            switch(dbt)
+            this.dbt = dbt;
+            switch (dbt)
             {
                 case databaseType.excel2003:
                     connectString = "Provider=Microsoft.Jet.OLEDB.4.0;" +
